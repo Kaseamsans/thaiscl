@@ -14,15 +14,25 @@ class CommentTableSeeder extends Seeder
         //
          DB::table("comments")->insert([
         	[
-        		'image_id'=> rand(0,10),
-        		'name' => "test1",
-        		'comment'=>  str_random(20),
+        		'image_id'=> 1,
+        		'name' => str_random(4),
+        		'comment'=>  str_random(100),
           	],
         	[
-        		'image_id'=> rand(0,10),
-        		'name' => "test2",
-        		'comment'=>  "test data",  		
-        	]
+        		'image_id'=> 1,
+        		'name' => str_random(4),
+        		'comment'=>  str_random(100),  		
+        	],
+            [
+                'image_id'=> 2,
+                'name' => str_random(4),
+                'comment'=>  str_random(100),       
+            ],
+            [
+                'image_id'=> 2,
+                'name' => str_random(4),
+                'comment'=>  str_random(100),       
+            ]
 
         ]);
     }
