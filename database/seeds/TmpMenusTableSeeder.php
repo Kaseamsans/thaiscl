@@ -17,6 +17,7 @@ class TmpMenusTableSeeder extends Seeder
         		'menu_name'=> "อาหารกลางวัน",
         		'school_id' => 1,
         		'calorie'=>  rand(100,2000),
+                'star'=> rand(1,5),
                 'description'=> str_random(100),
             ],
         

@@ -15,8 +15,14 @@ class TmpSchoolsTableSeeder extends Seeder
         DB::table("tmpschools")->insert([
         	[
         		'school_name'=> "nectecschool",
-        		'address' => str_random(50),
-        		'numbers'=>  rand(100,2000),
+        		'address' => "112 Thailand Science Park, Khlong Nueng, Khlong Luang District, Pathum Thani 12120",
+        		'numbers'=>  rand(500,4000) ,
+                'icon_path'=> 'img/logo3.png',
+                'email'=> 'test_hba@nectec.or.th',
+                'website'=> 'www.nectec.or.th',
+                'facebook_url' => 'https://www.facebook.com/NECTEC/',
+                'youtube_url'=> null,
+                'twiiter_url'=> 'https://twitter.com/nectec?lang=en'
           	],
         
         ]);

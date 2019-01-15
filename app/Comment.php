@@ -12,12 +12,13 @@ class Comment extends Model{
 	public static function validate($input) {
  
  		$rules = array(
- 				'name' => 'Required|Unique:comments',
+ 				'name' => 'Required',
  				'comment' => 'Required'
  				);
  
  		$message = array(
- 				'name.required' => 'Plase insert your name'
+ 				'name.required' => 'Plase insert your name',
+                'comment.required' => 'Plase insert your comment'
 				//address.min' => 'กรุณาป้อนที่อยู่อย่างน้อย 18 ตัวอักษรด้วยครับ',
  				//'confirmed' => 'รหัสผ่านไม่ตรงกัน'
  				);
@@ -40,5 +41,4 @@ class Comment extends Model{
 
     	return $data;
     }
-    //public function 
 }

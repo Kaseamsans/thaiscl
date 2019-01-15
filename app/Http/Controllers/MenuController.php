@@ -15,7 +15,8 @@ class MenuController extends Controller
   	}
     
   	public function show(){
-  		$menus = TmpMenus::all();
+  		//$menus = $this->menus->show();
+        $menus = TmpMenus::all();
 
   		return $menus;
   	}

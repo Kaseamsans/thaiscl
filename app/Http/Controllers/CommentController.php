@@ -39,16 +39,16 @@ class CommentController extends Controller
 
     	return $data;
     }
-    public function create_comment(){
+    public function create_comment(Request $request){
 
-    	$validate = Comment::validate(Input::all());
+    	$validate = Comment::validate($request->all());
     	if ($validate->passes()){
     		$comments = new Comment();
     		$comments->image_id = Input::get('image_id');
     		$comments->name = Input::get('name');
     		$comments->comment = Input::get('comment');
     		$comments->save();
-    		return "Save Successed";
+            return "Save Success";
     	}
     	else {
     		return $validate->messages();

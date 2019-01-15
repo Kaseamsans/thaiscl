@@ -18,6 +18,12 @@ class CreateTmpschoolsTable extends Migration
             $table->string('school_name',50);
             $table->longText('address');
             $table->integer('numbers');
+            $table->string('icon_path');
+            $table->string('email')->nullable();
+            $table->string('website')->nullable();
+            $table->string('facebook_url')->nullable();
+            $table->string('youtube_url')->nullable();
+            $table->string('twiiter_url')->nullable();
             $table->timestamps();
         });
     }

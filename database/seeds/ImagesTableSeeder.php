@@ -21,22 +21,22 @@ class ImagesTableSeeder extends Seeder
         	[
         		'image_name'=> 'food_plate',
         		'menu_id' => 1,
-        		'image_path' => 'img\subject1.png'
+        		'image_path' => 'img/subject1.jpg'
         	],
         	[
-        		'image_name'=> 'tom_kha_gai',
+        		'image_name'=> 'ต้มข่าไก่',
         		'menu_id' => 1,
-        		'image_path' => 'img\subject1.3.png'
+        		'image_path' => 'img/subject1.3.png'
         	],
         	[
-        		'image_name'=>  'fried pork',
+        		'image_name'=>  'หมูทอด',
         		'menu_id' => 1,
-        		'image_path'=> 'img\subject1.4.png',
+        		'image_path'=> 'img/subject1.4.png',
         	],
         	[
-        		'image_name'=> 'rice',
+        		'image_name'=> 'ข้าวสวย',
         		'menu_id' => 1,
-        		'image_path' => 'img\subject1.1.png'
+        		'image_path' => 'img/subject1.1.png'
         	],
 
         ]);

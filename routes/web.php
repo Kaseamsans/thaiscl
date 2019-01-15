@@ -16,13 +16,22 @@
 //});
 
 Route::get('/',"WebController@home");
+Route::group(['prefix'=>'item'], function() {
+    Route::group(['prefix'=>'/{menu_id}'], function() {
+        Route::get('/',"WebController@item");
+        Route::get('/comment/{image_id}','WebController@comment');
+        Route::post('/addcomment/{image_id}','WebController@add_comment');
+    });
+});
+//Route::post('addcomment','CommentController@create_comment');
+//addcomment
 //comments route
 //Route::get('CheckComments','CommentController@check_connection');
 //Route::get('test/SearchCommentById/{id}','CommentController@search_by_id');
 //Route::get('test/SearchCommentByImageId/{id}','CommentController@search_by_image_id');
 //Route::post('AddComment','CommentController@create_comment');
 //comments route
-Route::group(['prefix'=>'comments'],function() {
+Route::group(['prefix'=>'comments'], function() {
 	Route::get('/','CommentController@show');
 	Route::get('/CheckConnection','CommentController@check_connection');
     Route::get('/{id}','CommentController@search_by_id');

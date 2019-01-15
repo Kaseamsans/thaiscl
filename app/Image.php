@@ -22,7 +22,7 @@ class Image extends Model
     }
     public function search_by_menu_id($menu_id){
     	//$data = DB::table($table)->where('menu_id', $menu_id)->get();
-        $data = Image::where('image_id',$menu_id)->get();
+        $data = Image::where('menu_id',$menu_id)->get();
     	return $data;
     }
 }

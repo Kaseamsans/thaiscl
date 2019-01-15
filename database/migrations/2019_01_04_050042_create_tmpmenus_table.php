@@ -18,6 +18,7 @@ class CreateTmpmenusTable extends Migration
             $table->integer('school_id');
             $table->string('menu_name');
             $table->double('calorie');
+            $table->integer('star');
             $table->longtext('description');
             $table->timestamps();
         });

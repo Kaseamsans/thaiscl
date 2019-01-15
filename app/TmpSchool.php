@@ -20,8 +20,9 @@ class TmpSchool extends Model
         return $data;
     }
     public function search_by_school_name($school_name){
-    	$data = TmpSchool::where('school_name',$school_name)->get();
+    	//$data = TmpSchool::where('school_name',$school_name)->get();
+        $data = TmpSchool::where("school_name","like","%".$school_name."%")->get();
 
     	return $data;
-    } 
+    }
 }
